@@ -91,7 +91,7 @@ The analysis successfully identified critical predictors of vehicle fuel efficie
 
 ## 🧠 Author
 **Mohammed Saif Wasay**  
-*Data Analytics Graduate | Machine Learning Enthusiast | Passionate about turning data into insights*
+*Data Analytics Graduate -> Northeastern University* | Machine Learning Enthusiast | Passionate about turning data into insights*
 🔗 [Connect with me on LinkedIn](https://www.linkedin.com/in/mohammed-saif-wasay-4b3b64199/)
 ---
 > ⭐ Feel free to fork this repo, star it if you find it helpful, and reach out if you have feedback or questions!
