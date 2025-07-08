@@ -1,111 +1,94 @@
 # 🚗 Predictive Analytics: Linear Regression on Vehicle Fuel Efficiency
 
 ## 📌 Abstract
-This study investigates the factors contributing to vehicle fuel efficiency, measured in miles per gallon (MPG), using a dataset with various automotive attributes. Through data cleaning, exploratory data analysis (EDA), and model optimization, the most significant predictors of MPG were identified. Machine learning models including **Linear Regression**, **Ridge Regression**, and **Lasso Regression** were employed.
-
-🔍 Key findings:
-- **Model Year**, **Acceleration**, and **Vehicle Origin** significantly influence MPG.
-- Advanced regularization techniques enhanced model interpretability and accuracy.
+This project investigates the factors influencing vehicle fuel efficiency, measured in miles per gallon (MPG), using a dataset containing various automotive attributes. The analysis involves extensive data preprocessing, exploratory data analysis (EDA), and the implementation of regression models including **Linear Regression**, **Ridge Regression**, and **Lasso Regression**. The study identifies key predictors of MPG and demonstrates the effectiveness of regularization techniques in improving model performance and interpretability.
 
 ---
 
 ## 📖 Introduction
-Fuel efficiency is a key concern due to:
-- Environmental impact 🌍
-- Rising fuel prices ⛽
-- Regulatory demands 📜
+Fuel efficiency is a crucial metric in the automotive industry due to increasing environmental concerns, rising fuel prices, and tightening government regulations. The primary goals of this project are:
 
-This project aims to:
-1. Identify important predictors of MPG.
-2. Build and evaluate predictive models.
-3. Derive actionable insights from data.
+- To identify the automotive features that most significantly impact fuel efficiency.
+- To build regression models that predict MPG using these features.
+- To extract actionable insights from the data that could inform vehicle design and policy decisions.
 
 ---
 
 ## 🧪 Methods
 
-### 🔧 Data Cleaning
-- **Data Inspection**: Checked for missing and non-numeric values.  
-  ![Data Inspection](data_inspection.png)
+### Data Cleaning
+- Inspected the dataset for missing, non-numeric, and irregular values.
+- Imputed missing numerical values using the **median**, a robust measure against outliers.
+- Removed outliers using the **Interquartile Range (IQR)** method to prevent skewed model performance.
+- Normalized continuous variables using **MinMaxScaler** to ensure uniform feature scaling.
 
-- **Missing Value Handling**: Imputed using median strategy.  
-  ![Missing Values](missing values1.png)
+### Exploratory Data Analysis (EDA)
+- Performed correlation analysis to identify relationships between features.
+- Analyzed pairwise feature relationships and distribution trends.
+- Calculated **Variance Inflation Factor (VIF)** to detect and address multicollinearity.
 
-- **Outlier Removal**: Detected with boxplots and removed using IQR method.  
-  ![Outlier Detection](images/outlier_detection.png)
-
-- **Normalization**: Applied MinMaxScaler to scale numerical features.
-
-### 📊 Exploratory Data Analysis (EDA)
-- **Correlation Heatmap**  
-  ![Correlation Heatmap](images/correlation_heatmap.png)
-
-- **Pairplot Analysis**  
-  ![Pairplot](images/pairplot.png)
-
-- **Multicollinearity Check**: Removed features with high VIF values.
-
----
-
-## 🎯 Feature Selection
-- **Statistical Significance**: Selected features with p-value < 0.05.
-- **Lasso Regression**: Automatically selected impactful features.
+### Feature Selection
+- Used **p-values** from statistical modeling to identify significant predictors.
+- Applied **Lasso Regression** to automatically select the most relevant features by shrinking less important ones to zero.
 
 ---
 
 ## 🤖 Model Building & Evaluation
 
-### 📈 1. Linear Regression
-- MAE = **0.245**, RMSE = **0.310**, R² = **0.78**
-- Key predictors: Model Year, Acceleration, Vehicle Origin (US)
+Three regression models were developed:
 
-### 📘 2. Ridge Regression
-- R² = **0.79** — better generalization and reduced overfitting
+1. **Linear Regression**  
+   - R²: 0.78  
+   - Significant predictors: model year, acceleration, vehicle origin.
 
-### 📕 3. Lasso Regression
-- R² = **0.78**, fewer features used, simplifying interpretation
+2. **Ridge Regression**  
+   - R²: 0.79  
+   - Improved generalization and reduced overfitting via L2 regularization.
 
-### 📊 Feature Importance  
-![Feature Importance](images/feature_importance.png)
+3. **Lasso Regression**  
+   - R²: 0.78  
+   - Simplified model by selecting only impactful features using L1 regularization.
 
-### 📉 Residual Analysis  
-![Residual Plot](images/residuals.png)
+Models were evaluated using:
+- **Mean Absolute Error (MAE)**
+- **Root Mean Squared Error (RMSE)**
+- **R-squared (R²)**
 
 ---
 
 ## 💬 Discussion
-- **Model Year**: Newer cars = higher MPG
-- **Acceleration**: Better tuning = improved efficiency
-- **Vehicle Origin**: US-made cars had slightly lower MPG
 
-Regularized models (Ridge/Lasso) confirmed model robustness.
+### Key Findings:
+- **Model Year**: Strong positive impact on MPG; newer vehicles tend to be more efficient.
+- **Acceleration**: Positively associated with MPG, suggesting better-tuned engines.
+- **Vehicle Origin**: US-made vehicles showed slightly lower MPG compared to foreign-made cars.
+
+### Model Insights:
+- **Regularization** techniques improved robustness and interpretability.
+- **Lasso Regression** effectively simplified the model by removing redundant features.
 
 ---
 
 ## ✅ Conclusion
-This study effectively used machine learning and statistical techniques to uncover the most impactful features influencing MPG. Continuous innovation in vehicle design, especially post-2000 models, shows promising trends in fuel efficiency.
+The analysis successfully identified critical predictors of vehicle fuel efficiency using regression-based machine learning models. This project demonstrates the power of combining statistical techniques with machine learning to derive practical insights from real-world data.
 
-**Next Steps**:
-- Try **non-linear models** (e.g., Random Forest, Gradient Boosting)
-- Use **larger, real-world datasets**
+### Future Work:
+- Explore non-linear models such as **Random Forest** or **Gradient Boosting** to capture complex patterns.
+- Expand the analysis using more diverse or up-to-date datasets to improve generalizability.
 
 ---
 
 ## 📚 References
-- [Scikit-learn](https://jmlr.org/papers/v12/pedregosa11a.html)
-- [Statsmodels](https://www.statsmodels.org/)
-- [Matplotlib](https://doi.org/10.1109/MCSE.2007.55)
-- [Seaborn](https://doi.org/10.21105/joss.03021)
+- Pedregosa et al. (2011). *Scikit-learn: Machine Learning in Python.*
+- Seabold & Perktold (2010). *Statsmodels: Econometric and statistical modeling with Python.*
+- Hunter (2007). *Matplotlib: A 2D graphics environment.*
+- Waskom (2021). *Seaborn: Statistical data visualization.*
 
 ---
 
 ## 🧠 Author
 **Mohammed Saif Wasay**  
 *Data Analytics Graduate | Machine Learning Enthusiast | Passionate about turning data into insights*
-
+🔗 [Connect with me on LinkedIn](https://www.linkedin.com/in/mohammedsaifwasay/)
 ---
-
-> 🔗 Feel free to fork, star ⭐, or reach out with feedback or suggestions!
-
-
-
+> ⭐ Feel free to fork this repo, star it if you find it helpful, and reach out if you have feedback or questions!
