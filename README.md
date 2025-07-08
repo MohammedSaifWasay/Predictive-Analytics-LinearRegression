@@ -26,10 +26,10 @@ This project aims to:
 
 ### 🔧 Data Cleaning
 - **Data Inspection**: Checked for missing and non-numeric values.  
-  ![Data Inspection](images/data_inspection.png)
+  ![Data Inspection](data_inspection.png)
 
 - **Missing Value Handling**: Imputed using median strategy.  
-  ![Missing Values](images/missing_values.png)
+  ![Missing Values](missing values1.png)
 
 - **Outlier Removal**: Detected with boxplots and removed using IQR method.  
   ![Outlier Detection](images/outlier_detection.png)
