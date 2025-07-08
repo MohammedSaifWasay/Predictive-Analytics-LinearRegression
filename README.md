@@ -83,6 +83,9 @@ The analysis successfully identified critical predictors of vehicle fuel efficie
 - Seabold & Perktold (2010). *Statsmodels: Econometric and statistical modeling with Python.*
 - Hunter (2007). *Matplotlib: A 2D graphics environment.*
 - Waskom (2021). *Seaborn: Statistical data visualization.*
+- ![Python](https://img.shields.io/badge/Python-3.8-blue?logo=python)
+- 🐍 Built with: Python, Jupyter Notebook
+
 
 ---
 
